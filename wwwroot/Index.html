@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>News Page</title>
+</head>
+<body>
+    <h1>News Page</h1>
+
+    <h2>Create News</h2>
+    <form id="createNewsForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="content">Content:</label>
+        <input type="text" id="content" name="content" required>
+        <br>
+        <label for="createdAt">Created At:</label>
+        <input type="datetime-local" id="createdAt" name="createdAt" required>
+        <br>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+        <br>
+        <button type="submit" onclick="createNews(event)">Create</button>
+    </form>
+
+    <h2>News List</h2>
+    <table id="newsTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Created At</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Edit News</h2>
+    <form id="editNewsForm">
+        <label for="editNewsId">News ID:</label>
+        <input type="number" id="editNewsId" name="editNewsId" required>
+        <br>
+        <label for="editTitle">Title:</label>
+        <input type="text" id="editTitle" name="editTitle" required>
+        <br>
+        <label for="editContent">Content:</label>
+        <input type="text" id="editContent" name="editContent" required>
+        <br>
+        <label for="editCreatedAt">Created At:</label>
+        <input type="datetime-local" id="editCreatedAt" name="editCreatedAt" required>
+        <br>
+        <label for="editCategory">Category:</label>
+        <input type="text" id="editCategory" name="editCategory" required>
+        <br>
+        <button type="submit" onclick="updateNews(event)">Update</button>
+    </form>
+
+
+    <h2>Delete News</h2>
+    <form id="deleteNewsForm">
+        <label for="deleteNewsId">News ID:</label>
+        <input type="number" id="deleteNewsId" name="deleteNewsId" required>
+        <br>
+        <button type="submit" onclick="deleteNews(event)">Delete</button>
+    </form>
+
+    <script src="/js/news.js"></script>
+</body>
+</html>
